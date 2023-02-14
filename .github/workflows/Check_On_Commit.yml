@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: ghcr.io/nidap-community/dsp_github_workflow_env:v1.0
+      credentials:
+       username: ${{ github.actor }}
+       password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - run: echo "Running test in Official R-base docker container with devtools"
       
