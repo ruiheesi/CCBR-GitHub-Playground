@@ -9,7 +9,8 @@ on:
 jobs:
   Routine_Check_for_Commit:
     runs-on: ubuntu-latest
-    container: ruihe864/ccbr-github-playground:latest
+    container: 
+      image: ghcr.io/nidap-community/dsp_github_workflow_env:v1.0
     steps:
       - run: echo "Running test in Official R-base docker container with devtools"
       
